@@ -51,11 +51,11 @@ def ford_fulkerson(graph):
     # Looping while there is a path from source to sink in the residual graph
     while bfs(graph.residual, source, sink, parent):
         print(bold(f"\nITERATION {iteration}"))
-        display_bfs_trace(parent, source, sink, graph.n)  # Showing BFS tree
+        """display_bfs_trace(parent, source, sink, graph.n)  # Showing BFS tree"""
         path_flow = get_path_flow(graph.residual, parent, source, sink)  # Finding the bottleneck
-        display_augmenting_path(parent, source, sink, graph.n, path_flow)  # Showing the augmenting path and its flow
+        """display_augmenting_path(parent, source, sink, graph.n, path_flow)  # Showing the augmenting path and its flow"""
         update_residual_and_flow(graph, parent, source, sink, path_flow)  # Updating residual and flow graphs with new flows
-        display_residual_graph(graph.residual)  # Displaying updated residual graph
+        """display_residual_graph(graph.residual)  # Displaying updated residual graph"""
         max_flow += path_flow
         iteration += 1
 

@@ -145,9 +145,10 @@ def plot_point_cloud(results):
     plt.show()
 
 # Juste pour les tests
-time_results = point_cloud([10, 20], 10)
+time_results = point_cloud([10, 20,40, 100], 10)
 plot_point_cloud(time_results)
-
+"""
 # LES VRAIS TRUCS A LANCER
 time_results = point_cloud([10, 20, 40, 100, 400, 4000])
 plot_point_cloud(time_results)
+"""
